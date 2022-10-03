@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../Header/Header";
 
-const Home = () => {
+const Products = () => {
   return (
     <div>
       <Header></Header>
-      <h2>This is from home</h2>
+      <h2>This is from product page</h2>
     </div>
   );
 };
 
-export default Home;
+export default Products;
