@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
+import Users from "./components/Users/Users";
 import Main from "./layout/Main/Main";
 
 function App() {
@@ -11,11 +12,27 @@ function App() {
       path: "/",
       element: <Main></Main>,
       children: [
+        { path: "/", element: <Home></Home> },
         { path: "/home", element: <Home></Home> },
         { path: "/about", element: <About></About> },
+        { path: "/products", element: <Products></Products> },
+        {
+          path: "/users",
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+          element: <Users></Users>,
+        },
       ],
     },
-    { path: "/products", element: <Products></Products> },
+    {
+      path: "*",
+      element: (
+        <div>
+          <h1>404 error ! Page not Found</h1>
+        </div>
+      ),
+    },
   ]);
   return (
     <div className="App">
