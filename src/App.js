@@ -3,19 +3,18 @@ import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
+import Main from "./layout/Main/Main";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <div>
-          <h2>This Default Page</h2>
-        </div>
-      ),
+      element: <Main></Main>,
+      children: [
+        { path: "/home", element: <Home></Home> },
+        { path: "/about", element: <About></About> },
+      ],
     },
-    { path: "/home", element: <Home></Home> },
-    { path: "/about", element: <About></About> },
     { path: "/products", element: <Products></Products> },
   ]);
   return (
