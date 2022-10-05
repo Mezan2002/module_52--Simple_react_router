@@ -1,6 +1,8 @@
 .userContainer {
-  border: 2px solid goldenrod;
-  margin: 20px;
-  padding: 20px;
+  background-color: orangered;
+  width: 50%;
+  margin: 20px auto;
   border-radius: 20px;
+  padding: 20px;
+  color: white;
 }
