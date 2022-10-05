@@ -7,7 +7,7 @@ const Post = ({ post }) => {
     <div>
       <h2>{title}</h2>
       <p>{body}</p>
-      <Link to={`posts/${id}`}>Post Id: {id}</Link>
+      <Link to={`/posts/${id}`}>Post Id: {id}</Link>
     </div>
   );
 };

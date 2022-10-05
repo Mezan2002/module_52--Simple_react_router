@@ -5,12 +5,14 @@ const UserDetails = () => {
   const userDetails = useLoaderData();
   const { name, phone, address, company } = userDetails;
   return (
-    <div className="userDetailsCard">
+    <div style={{ marginTop: "50px" }}>
       <h1>User Detail Page</h1>
-      <h3>{name}</h3>
-      <p>Phone: {phone}</p>
-      <p>City: {address.city}</p>
-      <p>Works at {company.name}</p>
+      <div className="userDetailsCard">
+        <h3>{name}</h3>
+        <p>Phone: {phone}</p>
+        <p>City: {address.city}</p>
+        <p>Works at {company.name}</p>
+      </div>
     </div>
   );
 };
