@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
+import UserDetails from "./components/UserDetails/UserDetails";
 import Users from "./components/Users/Users";
 import Main from "./layout/Main/Main";
 
@@ -22,6 +23,15 @@ function App() {
             return fetch("https://jsonplaceholder.typicode.com/users");
           },
           element: <Users></Users>,
+        },
+        {
+          path: "/users/:userId",
+          loader: async ({ params }) => {
+            return fetch(
+              `https://jsonplaceholder.typicode.com/users/${params.userId}`
+            );
+          },
+          element: <UserDetails></UserDetails>,
         },
       ],
     },

@@ -9,7 +9,7 @@ const User = ({ user }) => {
       <p>Email: {email}</p>
       <p>
         <small>
-          Username: <Link to={`/friend/${id}`}>{username}</Link>
+          Username: <Link to={`/users/${id}`}>{username}</Link>
         </small>
       </p>
     </div>
